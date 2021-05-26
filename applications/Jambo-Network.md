@@ -1,16 +1,17 @@
 # General Grant Proposal
 
-#### Project Name: Jambo Network
+> This document is referenced in the terms and conditions and therefore needs to contain all the required information. Don't remove any of the mandatory parts presented in bold letters or as headlines! See the [Open Grants Program Process](https://github.com/w3f/Open-Grants-Program/blob/master/README_2.md) on how to submit a proposal.
 
-#### Team Name: Jambo Network
+* **Project Name:** Jambo Network
 
-#### Payment Address: 0x3e53029a2d870161d5894861a101419e6c985660
+* **Team Name:** Jambo Network
+* **Payment Address:** 0x3e53029a2d870161d5894861a101419e6c985660
 
 
+## Project Overview
+### Overview
 
-1.**Overview**
-
-● **A brief description of your project.**
+#### A brief description of your project
 
 As the first blockchain ad-tech support platform, Jambo has been committed to creating a transparent and credible decentralized advertising industry value ecology. With the Polkadot heterogeneous multi-chain architecture, the platform can realize the value interoperability of different advertising industry chains, make the database transparent, greatly improve the service development of the blockchain advertising industry, and accelerate the serving efficiency of digital advertising.
 
@@ -18,10 +19,9 @@ Jambo has continued deepening the value of on-chain traffic and improving the ac
 
 
 
-● **An indication of how your project relates to/integrates into** **Substrate/Polkadot/Kusama.**
+#### An indication of how your project relates to integrates into Substrate Polkadot Kusama
 
 The underlying operating system framework of a blockchain must meet at least the following five requirements:
-
 
 
 Modular functions
@@ -52,7 +52,7 @@ Every developer needs to consider on-demand security distribution. The cost of a
 
 through Polkadot's consensus mechanism. After access to the slot, you do not need to maintain the verification node by yourself, which enables you to focus on application and function realization.
 
-● **An indication of why your team is interested in creating this project.**
+#### An indication of why your team is interested in creating this project
 
 In the global Internet advertising market worth trillions of U.S. dollars, marketing budgets are mainly grasped by major media such as search engines and social media.
 
@@ -80,9 +80,9 @@ In the process of mobile advertising, endless agents such as DSP, ADX, SSP andDM
 
 Jambo enables the advertising industry's service network to provide transparent, efficient and stable communication services for the industry. We are committed to helping users to participate in blockchain advertising applications, promoting implementation of high-traffic applications in the application ecosystem, gathering new potential development teams to build a large-traffic reference matrix in digital advertising, and affecting the traffic circle of multiple industries and communities, thus enabling more people to enjoy the development dividends of high-traffic applications.
 
-**2. Project Details**
+## Project Details
 
-● **Mockups/designs of any UI components**
+### Mockups designs of any UI components
 
 
 
@@ -102,7 +102,7 @@ Jambo enables the advertising industry's service network to provide transparent,
 
  ![img](images/image6.png)
 
-● **API specifications of the core functionality**
+### API specifications of the core functionality
 
 We provide a simple and easy-to-use front-end JS component that wraps a series of functions for accessing parachain data and exposes API interfaces to provide services for JSON RPC calls from applications to nodes. It handles all encoding and decoding parameters, provides access to RPC functions, and allows queryingchainstatus and committing transaction progress.
 
@@ -116,7 +116,7 @@ api.query.. provides a lightweight interface to access the status of the Paracha
 
 api.tx.. provides an interface for creating transactions, storing data on the chain, or changing data on the chain, such as changing the status of the Parachain. api.consts.. is used to access the constants of various modules, such as module parameters.
 
-● **An overview of the technology stack to be used.**
+### An overview of the technology stack to be used
 
 Polkadot's Substrate framework modularized many functions of the blockchain while maintaining many customizable functions and modules. For example, the underlying communication module, account system, and consensus mechanism can all be customized by themselves. Therefore, we use Substrate to build Polkadot parachain applications.
 
@@ -126,9 +126,11 @@ Parachain integrates the identity system, reputation system, anti-fingerprint sy
 
 Using a series of machine learning algorithms and manual review (voting or phisher punishment) to provide data for publishers and advertisers can ensure a complete network environment. All clicks and usage traces will be analyzed by the system in real time. The identity and reputation system guarantees the ecosystem by providing a reliable and protective layer to prevent it from being harmed by bad advertisements, users or publishers.
 
-● **Documentation of core components, protocols, architecture,etc.to be deployed.**
+### Documentation of core components, protocols, architecture,etc.to be deployed
 
-![img](images/image5.png)**Advertiser advertises**
+![img](images/image5.png)
+
+**Advertiser advertises**
 
 Advertisers post their advertising needs to the advertising trading platform, andthe advertisement producer participates in the bidding; the winning advertisement producer begins to produce multimedia advertising content, including but not limited to pictures, videos, web pages, AR, VR, etc., and the production is completed and delivered to the advertisers.
 
@@ -136,27 +138,21 @@ Advertisers draw up costs, formulate advertising plans, call the upper-level app
 
 content producers jointly do evil, so advertising content needs to be reviewed and approved by the entire network. When the review is completed, the ad hosting engine starts tasks in parallel:
 
--Extract features of advertising content and generate MetaData; -The advertisement content is divided into pieces, and each piece is encrypted, anda hash index and merkle root are generated;
-
--Advertiser’s delivery plan, metadata and content hash index to generate advertising smart contract;
+- Extract features of advertising content and generate MetaData; 
+- The advertisement content is divided into pieces, and each piece is encrypted, anda hash index and merkle root are generated;
+- Advertiser’s delivery plan, metadata and content hash index to generate advertising smart contract;
 
 When the task is completed, the advertising hosting will include the advertising smart contract in the newly added block, and at the same time broadcast the new delivery plan to the entire network in the form of news. The oracle receives the message, pulls the smart contract from the chain and indexes it.
 
-**Digital advertising media broadcast advertising** When the advertising audience touches the advertising digital media, the digital media collects user information through edge computing, creates a unique digital identity for each user, and sends the user's digital identity to the advertising matching engine. The advertisement matching engine sends the media attributes and the user's digital identity to the oracles participating in the advertising ecology, and waits for the oracles to return the recommended advertising content.
+Digital advertising media broadcast advertising When the advertising audience touches the advertising digital media, the digital media collects user information through edge computing, creates a unique digital identity for each user, and sends the user's digital identity to the advertising matching engine. The advertisement matching engine sends the media attributes and the user's digital identity to the oracles participating in the advertising ecology, and waits for the oracles to return the recommended advertising content.
 
 Inside the oracle:
 
-
-
--Query user logs based on the user's digital identity
-
--Load the smart contract according to the index
-
--Analyze user logs and extract user characteristics
-
--Match user characteristics, filter contracts, estimate -click-through rate -Calculate the ranking of advertisements according to the -bidding price in the contract
-
--Return recommended ad content
+- Query user logs based on the user's digital identity
+- Load the smart contract according to the index
+- Analyze user logs and extract user characteristics
+- Match user characteristics, filter contracts, estimate -click-through rate -Calculate the ranking of advertisements according to the -bidding price in the contract
+- Return recommended ad content
 
  After receiving the advertising content returned by different oracle machines, thematching engine selects the content recommended by the oracle machine with better effect and reputation based on internal algorithms and probability weighting, and returns the final advertising content hash value to the digital media. The digital media obtains the hash value of the advertisement content, and requests the secret key and streaming media content from the advertisement hosting engine, decrypts the returned secret key in the( trust zone) within the system and generates the decryption key for the streaming media content, anduses the The secret key decrypts each piece of streaming media content and plays the advertising content to the advertising audience.
 
@@ -168,7 +164,7 @@ contract is automatically transferred to the digital media and the oracle that h
 
 Digital media needs to bury points for the follow-up behavior of the advertising audience before the advertisement is broadcast. After the advertising audience receives the advertisement in the digital media, the digital media needs to continuously collect the follow-up behaviors of the advertising audience, such as whether the audience clicks, whether to watch repeatedly, whether to generate related consumption, etc., and complete the user log on the chain. Furthermore, audiences can also set their own preferences, monetize their own data, and openit to traffic providers to match advertisements that are more suitable for them. All data generates an intermediate key (Diffie Hellman Key Exchange) based on the user's public key. The intermediate key can be used to encrypt user information and send the information (HTTPS) to the on-chain user log, which is encrypted and stored by AES256. Digital identities and digital assets based on blockchain technology are both open, anonymous and non-tamperable, and can completely solve the problem of false traffic that has plagued the advertising industry for many years.
 
-​              ● **PoC/MVP or other relevant prior work or research on the topic**
+**PoC/MVP or other relevant prior work or research on the topic**
 
 From the user's access to digital media to the display of advertisement content to the user, the system needs to go through a series of processes such as user tag extraction, advertisement tag extraction, advertisement retrieval, click-through rate estimation, advertisement ranking, and user behavior recall. Each process will contain many sub-processes. For example, advertisement sorting includes complex logic calculations such as advertisement bidding logic, budget management, and so on. At the same time, due to the particularity of the advertising scene, the system needs to push the advertising content to the digital advertising media and display it to the advertising audience within a unit time of milliseconds. However, in a decentralized network environment, it is difficult to meet business requirements.
 
@@ -178,11 +174,9 @@ We built an instance of an advertising oracle and used online data to verify the
 
 **Data**
 
--Historical log data: ad request time, user ID, ad slot ID, bidding advertisement information, etc.
-
--User information data: including user ID, age, gender, region, behavioral interests, etc.
-
--Advertising data: advertising operation information, advertising static information**Aims**
+- Historical log data: ad request time, user ID, ad slot ID, bidding advertisement information, etc.
+- User information data: including user ID, age, gender, region, behavioral interests, etc.
+- Advertising data: advertising operation information, advertising static information**Aims**
 
 Forecast the daily exposure of advertisements
 
@@ -202,29 +196,27 @@ Feature extraction: use compressed interactive network CIN (xDeepFM), key-value 
 
 respectively, and finally merge them into tensors Feed the neural network training. The user log has extracted user behavior data and converted it into a text sequence. Therefore, it is only necessary to monitor the news of the user log changes, andappend the modified data to the local database of the oracle and analyze it. The specific process is as follows:
 
-\1. Use word2vec algorithm to embed the advertisement, you can get the embedding of the advertisement content.
+1. Use word2vec algorithm to embed the advertisement, you can get the embedding of the advertisement content.
 
-\2. In the recommended scenario, the graph structure is more present among data objects. A typical scenario is a global relationship graph generated from user behavior data and advertisements. At this time, word2vec can't show this relationship well, so the system chooses Graph Embeding, and specifically usesDeepWalk, which can convert user behavior records into relationship graphs.
+2. In the recommended scenario, the graph structure is more present among data objects. A typical scenario is a global relationship graph generated from user behavior data and advertisements. At this time, word2vec can't show this relationship well, so the system chooses Graph Embeding, and specifically usesDeepWalk, which can convert user behavior records into relationship graphs.
 
-\3. Compressed Interaction Network (CIN) is used to further extract data features, mainly considering the following factors:
+3. Compressed Interaction Network (CIN) is used to further extract data features, mainly considering the following factors:
+  * User behavior is a large-scale sparse data
+  * Interaction is applied at the vector level, not at the bit level (3) High-level feature interaction is clearly measured (4) The complexity of the network does not increase with the degree of interactionThe outer product in each dimension is used for feature interaction, and the result tensor obtained is the intermediate result of further learning.
 
-(1) User behavior is a large-scale sparse data
+4. Use the neural model of Key-Value Memory to realize the mappingof floating-point numbers to vectors；
 
-(2) Interaction is applied at the vector level, not at the bit level (3) High-level feature interaction is clearly measured (4) The complexity of the network does not increase with the degree of interactionThe outer product in each dimension is used for feature interaction, and the result tensor obtained is the intermediate result of further learning.
+5. Compared with the direct use of floating-point numbers, this method retains more semantic information;
 
-\4. Use the neural model of Key-Value Memory to realize the mappingof floating-point numbers to vectors；
+6. Compared with the method of binning and serving as a category feature, the neighboring vectors of this method are correlated;
 
-\5. Compared with the direct use of floating-point numbers, this method retains more semantic information;
+7. Compared with the numerical × vector method, this method has non-linear characteristics;
 
-\6. Compared with the method of binning and serving as a category feature, the neighboring vectors of this method are correlated;
+8. Make full use of exposure log records to cluster advertisements based on user behavior.
 
-\7. Compared with the numerical × vector method, this method has non-linear characteristics;
+9. Finally, the extracted features are combined and input into the neural network for training.
 
-\8. Make full use of exposure log records to cluster advertisements based on user behavior.
-
-\9. Finally, the extracted features are combined and input into the neural network for training.
-
-**Validation results：**
+**Validation results**
 
 ![img](images/image4.png)
 
@@ -240,13 +232,14 @@ respectively, and finally merge them into tensors Feed the neural network traini
 
 ![img](images/image9.png)
 
-**3. EcosystemFit**
+## EcosystemFit
 
 Similar to Vidy, BAT and other projects that belong to the advertising field, they are more of an application platform for blockchain advertising. The difference between
 
 JAMBO is to create a blockchain advertising technology support platform to maintain a large number of developers for related projects. With customized functions and modules, JAMBO provides basic technical services and opens the underlying technical network services, which has become a regular option for developers in the process of business design and system development. By usingPolkadot Ecological Substrate to build your own application chain, data andassetshave interoperability, so that more people can enjoy the dividends of the development of high-traffic applications.
 
-**4. Team** **Team members：**
+## Team 
+### Team members
 
 Co-Founder Jco Leung；
 
@@ -264,11 +257,11 @@ Co-Founder Jco Leung
 
 Jambo Network
 
-● **Team Website**
+### Team Website
 
 https://jambo.network 
 
-● **Legal Structure**
+### Legal Structure
 
 Name：BITWAY TECHNOLOGY PTY LTD
 
@@ -276,15 +269,15 @@ Type：Australian Proprietary Company, Limited By Shares Locality of registered
 
 Office: SYDNEY NSW 2000
 
-● **Team’s experience**
+### Team’s experience
 
 counterparty.io (https://github.com/CounterpartyXCP/counterparty-lib) ，For theentire counterparty project, Rowan Wood is responsible for coordinating the programming of the code.
 
-● **Team Code Repos**
+### Team Code Repos
 
 [https://github.com/CounterpartyXCP/counterparty-lib](https://www.google.com/url?q=https://github.com/CounterpartyXCP/counterparty-lib&sa=D&source=editors&ust=1622050253751000&usg=AOvVaw3nyxFKERj0RKtEUHFHSvVF)
 
- ● **Team LinkedIn Profiles**
+### Team LinkedIn Profiles
 
 Jco Leung，CO-Founder，https://www.linkedin.com/in/jco-leung-74267520a Artem Vasilyev ，CMO，http://linkedin.com/in/artem-vasilyev-1a5a8b140 Rowan Wood，CTO ，https://www.linkedin.com/in/rowan-wood/ MaIte Kunert，COO ，https://www.linkedin.com/in/malte-k-40859b20a/
 
@@ -292,9 +285,9 @@ Jco Leung，CO-Founder，https://www.linkedin.com/in/jco-leung-74267520a Artem V
 
 
 
-**5. Development Roadmap**
+## Development Roadmap
 
-### **Overview**
+### Overview
 
 **Total Estimated Duration**: 4 Months for version1.0
 
@@ -304,7 +297,7 @@ Jco Leung，CO-Founder，https://www.linkedin.com/in/jco-leung-74267520a Artem V
 
  
 
-### **Milestone 1：Jambo Substract Parachain**
+### Milestone 1：Jambo Substract Parachain
 
 - **Estimated Duration:** 6 Weeks
 - **FTE:** 5
@@ -329,7 +322,7 @@ Jco Leung，CO-Founder，https://www.linkedin.com/in/jco-leung-74267520a Artem V
 
  
 
-### **Milestone 2：Substract Parachain Integration With The Mainchain**
+### Milestone 2：Substract Parachain Integration With The Mainchain
 
 - **Estimated Duration:** 1 month
 - **FTE:** 6
@@ -355,7 +348,7 @@ Jco Leung，CO-Founder，https://www.linkedin.com/in/jco-leung-74267520a Artem V
 
  
 
-### **Milestone 3：Under-chain Jambo Orcale Pallet**
+### Milestone 3：Under-chain Jambo Orcale Pallet
 
 - **Estimated Duration:** 1 month
 - **FTE:** 6
@@ -379,7 +372,7 @@ Jco Leung，CO-Founder，https://www.linkedin.com/in/jco-leung-74267520a Artem V
 
  
 
-### **Milestone 4：Available APIs To Developers**
+### Milestone 4：Available APIs To Developers
 
 - **Estimated Duration:** 2 Weeks
 - **FTE:** 6
@@ -409,29 +402,25 @@ Jco Leung，CO-Founder，https://www.linkedin.com/in/jco-leung-74267520a Artem V
 
 
 
-**6.Community engagement**
+## Community engagement
 
-1.https://jambonetofficial.medium.com/the-solution-to-the-dividend-of-traffic-application-development-is-to-decentralize-7c7c315f9834
+1. https://jambonetofficial.medium.com/the-solution-to-the-dividend-of-traffic-application-development-is-to-decentralize-7c7c315f9834
 
-2.[https://jambonetofficial.medium.com/the-solution-to-the-dividend-of-traffic-application-development-is-to-decentralize-7c7c315f983](https://www.google.com/url?q=https://jambonetofficial.medium.com/the-solution-to-the-dividend-of-traffic-application-development-is-to-decentralize-7c7c315f9834&sa=D&source=editors&ust=1622050253823000&usg=AOvVaw0aZbQxiE_9g7ah4PAFrDrw)[4](https://www.google.com/url?q=https://jambonetofficial.medium.com/the-solution-to-the-dividend-of-traffic-application-development-is-to-decentralize-7c7c315f9834&sa=D&source=editors&ust=1622050253824000&usg=AOvVaw3xq36wYCk-2H5wK-tzZhqK)
-
-
-
-
-
-  **7. Future Plans**
+2. [https://jambonetofficial.medium.com/the-solution-to-the-dividend-of-traffic-application-development-is-to-decentralize-7c7c315f983](https://www.google.com/url?q=https://jambonetofficial.medium.com/the-solution-to-the-dividend-of-traffic-application-development-is-to-decentralize-7c7c315f9834&sa=D&source=editors&ust=1622050253823000&usg=AOvVaw0aZbQxiE_9g7ah4PAFrDrw)[4](https://www.google.com/url?q=https://jambonetofficial.medium.com/the-solution-to-the-dividend-of-traffic-application-development-is-to-decentralize-7c7c315f9834&sa=D&source=editors&ust=1622050253824000&usg=AOvVaw3xq36wYCk-2H5wK-tzZhqK)
 
 
 
 
 
+## Future Plans
 
 
-| 2021 Q1 | - Build a core value foundation- Building the core technology framework- Expand the advertising blockchain technology market |
-| ------- | ------------------------------------------------------------ |
-| 2021 Q2 | - Subtract framework integration- Combined with cross-chain technology, establish business model and token model- Establish a front-end model framework |
-| 2021 Q3 | - Establish a test team to test cross-chain modules- Including the establishment of test specifications, test modules, etc.  - Subtract advertising hosting engine module implementation- Create an advertising oracle frame- Create Javascript front-end components and expose API interfaces for communication with Polkadot and Substrate nodes |
-| 2021 Q4 | - Test JAMBO NETWORK, conduct security audits, etc.   - Platform role test model- Make a beta release and repeat feedback |
-| 2022 Q1 | - Start strategic cooperation with publishers in the global advertising market- Comprehensive technical support- Start to build a transparent database |
-| 2022 Q2 | - In order to make the ecology of JAMBO develop more healthily, start the JAMBO builder plan- Through the builder program, users can participate more in the autonomous ecology of JAMBO- The artificial intelligence system improves the convenience for users to participate in blockchain advertising applications, and enjoys the dividends of the development of high-traffic applications |
-| 2022 Q3 | - Building a block chain digital advertising traffic matrix- Accept more value interactions of digital tokens |
+| **Time** | **Plan**                              | 
+| ---------- | -------------------------------------------- | 
+| 2021 Q1 | Build a core value foundation- Building the core technology framework. Expand the advertising blockchain technology market |
+| 2021 Q2 |  Subtract framework integration- Combined with cross-chain technology, establish business model and token model- Establish a front-end model framework |
+| 2021 Q3 |  Establish a test team to test cross-chain modules. Including the establishment of test specifications, test modules, etc. Subtract advertising hosting engine module implementation. Create an advertising oracle frame. Create Javascript front-end components and expose API interfaces for communication with Polkadot and Substrate nodes |
+| 2021 Q4 | Test JAMBO NETWORK, conduct security audits, etc. Platform role test model. Make a beta release and repeat feedback |
+| 2022 Q1 | Start strategic cooperation with publishers in the global advertising market. Comprehensive technical support. Start to build a transparent database |
+| 2022 Q2 | In order to make the ecology of JAMBO develop more healthily, start the JAMBO builder plan. Through the builder program, users can participate more in the autonomous ecology of JAMBO. The artificial intelligence system improves the convenience for users to participate in blockchain advertising applications, and enjoys the dividends of the development of high-traffic applications |
+| 2022 Q3 | Building a block chain digital advertising traffic matrix. Accept more value interactions of digital tokens |
